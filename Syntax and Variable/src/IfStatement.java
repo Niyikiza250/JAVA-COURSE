@@ -201,7 +201,7 @@ public class IfStatement {
             System.out.println("You are not eligible to make Admission");
         }
 
-         */
+
         // 🏦 Bank Loan Approval
             String accountActive, stableAccount;
             String username, password;
@@ -270,11 +270,14 @@ public class IfStatement {
         }
 
 
-
+            */
 
 
         // LOOPS= Do, While, For.
-
+            for(int i=10; i>=1; i--){
+                if (i % 2 ==0){
+                System.out.println(i+" $");
+            }}
 
     }
 
