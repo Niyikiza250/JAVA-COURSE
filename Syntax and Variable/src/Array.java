@@ -100,7 +100,7 @@ public class Array {
 
         scan.close();
 
-         */
+
       double [] transactions = new double[3];
         System.out.println("Do you want to know your transactions flow?");
       for (int i=0; i< transactions.length;i++){
@@ -141,12 +141,31 @@ public class Array {
                 }
             }
             for (int i=0; i<transactions.length; i++){
-                if (transactions[i]<10000){
+                if (transactions[i]< 10000){
                     lessTrans++;
                 }
             }
         System.out.println(" The greater Transaction done is : "+greaterTrans);
         System.out.println(" The less Transaction done is : "+ lessTrans);
         System.out.println(" The Average of Transaction done is : "+ average);
+
+         */
+        String[] product = new String[3];
+        int[] quantity= new int[3];
+        double[] prices = new double[1];
+
+        for (int i=0; i<product.length; i++){
+            System.out.print("Enter the product "+(i+1)+ " :");
+            product[i]= scan.nextLine();
+            for (int h=0; h< quantity.length; h++){
+                System.out.print("Enter how many pieces in Quality "+(h+1)+ "  : ");
+                quantity[i]=scan.nextInt();
+                scan.nextLine();
+                for (int k=0; k< prices.length; k++){
+                    System.out.println("Enter the price of "+(k+1) + " piece : ");
+                    prices[i]=scan.nextDouble();
+                }
+            }
+        }
     }
 }
