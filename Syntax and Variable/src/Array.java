@@ -24,7 +24,7 @@ public class Array {
             System.out.println("The name number"+(i+1)+ "is ; "+ name[i]);
         }
 
-         */
+
         String [] names= new String[10];
         double [] marks = new double[10];
 
@@ -85,11 +85,11 @@ public class Array {
         System.out.println("\n===== ANALYSIS =====");
 
 
-        System.out.println("Student with highest mark: " + highestStudent);
+        System.out.println("Student with the highest mark: " + highestStudent);
         System.out.println("Highest mark: " + highMarks);
 
 
-        System.out.println("Student with lowest mark: " + lowestStudent);
+        System.out.println("Student with the lowest mark: " + lowestStudent);
         System.out.println("Lowest mark: " + lowestMarks);
 
         System.out.println("Total marks: " + total);
@@ -100,5 +100,53 @@ public class Array {
 
         scan.close();
 
+         */
+      double [] transactions = new double[3];
+        System.out.println("Do you want to know your transactions flow?");
+      for (int i=0; i< transactions.length;i++){
+          System.out.println("  Enter your Transaction number "+(i+1)+" :");
+          transactions[i]=scan.nextDouble();
+      }
+        System.out.println(" The Total Transactions done");
+      for (int i=0; i<transactions.length; i++){
+          System.out.println(" Transaction number "+(i+1)+" :"+transactions[i]);
+      }
+      long total=0;
+      long average=0;
+      for (int i=0; i<transactions.length; i++){
+          total= (long) (total+transactions[i]);
+          average= total/transactions.length;
+
+      }
+        System.out.println(" The total amount in Transactions = " +total);
+      double highest=transactions[0];
+      double smallest=transactions[0];
+      for (int i=0;i<transactions.length; i++) {
+            if (transactions[i] > highest) {
+                highest = transactions[i];
+            }
+      }
+        System.out.println(" The highest transaction done is :  " + highest);
+            for (int i=0; i<transactions.length; i++){
+                 if (transactions[i]<smallest){
+                    smallest=transactions[i];
+                 }
+            }
+        System.out.println(" The highest transaction done is :  " + smallest);
+            int greaterTrans=0;
+           int  lessTrans=0;
+            for (int i=0; i<transactions.length; i++){
+                if (transactions[i]>=100000){
+                    greaterTrans++;
+                }
+            }
+            for (int i=0; i<transactions.length; i++){
+                if (transactions[i]<10000){
+                    lessTrans++;
+                }
+            }
+        System.out.println(" The greater Transaction done is : "+greaterTrans);
+        System.out.println(" The less Transaction done is : "+ lessTrans);
+        System.out.println(" The Average of Transaction done is : "+ average);
     }
 }
