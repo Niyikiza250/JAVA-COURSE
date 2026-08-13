@@ -149,7 +149,7 @@ public class Array {
         System.out.println(" The less Transaction done is : "+ lessTrans);
         System.out.println(" The Average of Transaction done is : "+ average);
 
-         */
+
         String[] product = new String[3];
         int[] quantity= new int[3];
         double[] prices = new double[1];
@@ -167,5 +167,28 @@ public class Array {
                 }
             }
         }
+
+
+        String password="";
+        String username="";
+        int age=0;
+        while (!username.equalsIgnoreCase("Eric Niyikiza") ){
+
+            System.out.println(" Enter Your Username here : ");
+            username=scan.nextLine();
+
+
+        while (!password.equals("12345")){
+            System.out.println("Enter Your Password : ");
+            password=scan.nextLine();
+         while (!(age >=18) ||(!(age <=50)))  {
+             System.out.println(" Enter your age here : ");
+             age=scan.nextInt();
+         }
+        }}
+        System.out.println(" Your Login Successfully");
+
+         */
+
     }
 }
