@@ -1,3 +1,5 @@
+package Step1;
+
 import java.util.Scanner;
 
 public class Array {
@@ -172,7 +174,7 @@ public class Array {
         String password="";
         String username="";
         int age=0;
-        while (!username.equalsIgnoreCase("Eric Niyikiza") ){
+        while (!username.equalsIgnoreCase("Eric NIYIKIZA") ){
 
             System.out.println(" Enter Your Username here : ");
             username=scan.nextLine();

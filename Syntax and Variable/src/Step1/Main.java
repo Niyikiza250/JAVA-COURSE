@@ -1,4 +1,5 @@
-import java.sql.SQLOutput;
+package Step1;
+
 import java.util.Scanner;
 
 public class Main {
