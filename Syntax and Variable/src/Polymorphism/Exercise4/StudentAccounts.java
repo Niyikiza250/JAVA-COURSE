@@ -1,0 +1,16 @@
+package Polymorphism.Exercise4;
+
+public class StudentAccounts extends BankAccounts{
+
+    @Override
+    void CalculateInterests() {
+        int time=3;
+        double rate =0.3;
+        double interest= getBalance()*rate*time;
+        System.out.println(" \n\nAccount Holder Name : "+getAccountHolderName()+"\n\n");
+        System.out.println(" Account Number : " +getAccountNumber());
+        System.out.println(" The balance Entered : "+ getBalance());
+        System.out.println("\n\n The interest calculation results ");
+        System.out.println(" The Interest for this account type is "+ interest+" \n\n");
+    }
+}
