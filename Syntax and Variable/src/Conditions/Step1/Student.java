@@ -1,4 +1,4 @@
-package Step2;
+package Conditions.Step1;
 
 import java.util.Scanner;
 
