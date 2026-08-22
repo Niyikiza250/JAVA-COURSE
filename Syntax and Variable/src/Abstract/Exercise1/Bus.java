@@ -1,6 +1,6 @@
-package Abstract;
+package Abstract.Exercise1;
 
-public class Bus extends Vehicle{
+public class Bus extends Vehicle {
 
     @Override
     void Start() {

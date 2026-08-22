@@ -1,4 +1,4 @@
-package Abstract;
+package Abstract.Exercise1;
 
 public abstract class Vehicle {
         private String brand;
