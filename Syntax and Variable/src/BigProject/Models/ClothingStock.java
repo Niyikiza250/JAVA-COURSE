@@ -15,17 +15,17 @@ public class ClothingStock extends StockItem {
     }
 
     @Override
-    protected void displayItemData() {
-
-    }
-
-    @Override
     protected void inputItemData() {
 
     }
 
     @Override
     protected void validateItemData() {
+
+    }
+
+    @Override
+    protected void displayItemData() {
 
     }
 }

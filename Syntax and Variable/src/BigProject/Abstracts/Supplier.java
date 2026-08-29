@@ -10,23 +10,48 @@ public abstract class Supplier {
 
 
     public void setSupplierId(String supplierId) {
-        this.supplierId = supplierId;
+        if (supplierId.matches("[a-zA-Z ]+") && supplierId.matches("[0-9]")) {
+            this.supplierId = supplierId;
+        }
+        else {
+            System.out.println(" The Supplier Id must contain characters or numbers .");
+        }
     }
 
     public void setSupplierName(String supplierName) {
-        this.supplierName = supplierName;
+        if (supplierName.matches("[a-zA-Z ]+")) {
+            this.supplierName = supplierName;
+        }
+        else{
+            System.out.println(" The Supplier name must contain characters ");
+        }
     }
 
     public void setContactNumber(String contactNumber) {
-        this.contactNumber = contactNumber;
+        if (!contactNumber.isEmpty()) {
+            this.contactNumber = contactNumber;
+        }
+        else {
+            System.out.println(" The Contact number must not be Empty");
+        }
     }
 
     public void setEmail(String email) {
-        this.email = email;
+        if (email.contains("@")) {
+            this.email = email;
+        }
+        else {
+            System.out.println(" The email must contain @ ");
+        }
     }
 
     public void setRating(int rating) {
-        this.rating = rating;
+        if (rating>0) {
+            this.rating = rating;
+        }
+        else {
+            System.out.println(" The rating score must be greater than 0 ");
+        }
     }
 
     public String getSupplierId() {

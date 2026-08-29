@@ -1,38 +1,64 @@
 package BigProject.Abstracts;
 
+import java.time.LocalDate;
+
 public abstract class Order {
 
     private String orderId;
-    private String orderDate;
+    private LocalDate orderDate;
     private String supplierId;
     private  double totalAmount;
     private  String orderStatus;
 
     public void setOrderId(String orderId) {
-        this.orderId = orderId;
+        if (orderId.matches("[a-zA-Z ]+") && orderId.matches("[0-9]") || !orderId.isEmpty()) {
+            this.orderId = orderId;
+        }
+        else {
+            System.out.println(" The OrderId must be btn A-Z and 0-9 ");
+        }
+
     }
 
-    public void setOrderDate(String orderDate) {
-        this.orderDate = orderDate;
+    public void setOrderDate(LocalDate orderDate) {
+        if (orderDate.isAfter(LocalDate.now())) {
+            this.orderDate = orderDate;
+        }
+        else {
+            System.out.println(" The Order Date has Expired.");
+        }
     }
 
     public void setSupplierId(String supplierId) {
-        this.supplierId = supplierId;
+        if (supplierId.matches("[a-zA-Z ]+") && supplierId.matches("[0-9]") || !supplierId.isEmpty()) {
+            this.supplierId = supplierId;
+        }
+        System.out.println(" The Supplier Id must be btn A-Z and 0-9.");
     }
 
     public void setTotalAmount(double totalAmount) {
-        this.totalAmount = totalAmount;
+        if (totalAmount>0) {
+            this.totalAmount = totalAmount;
+        }
+        else {
+            System.out.println(" The total Amount must be greater than Zero (0).");
+        }
     }
 
     public void setOrderStatus(String orderStatus) {
-        this.orderStatus = orderStatus;
+        if (orderStatus.matches("[a-zA-Z ]+") && orderStatus.matches("[0-9]")) {
+            this.orderStatus = orderStatus;
+        }
+        else {
+            System.out.println(" The order status must be Characters or numbers .");
+        }
     }
 
     public String getOrderId() {
         return orderId;
     }
 
-    public String getOrderDate() {
+    public LocalDate getOrderDate() {
         return orderDate;
     }
 
