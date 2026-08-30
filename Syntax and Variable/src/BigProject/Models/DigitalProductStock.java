@@ -99,18 +99,18 @@ public class DigitalProductStock extends StockItem {
 
     @Override
     protected void inputItemData() {
-        if (getItemId()!=null && !getItemId().trim().isEmpty()){
+        if (getItemId()==null && getItemId().trim().isEmpty()){
             System.out.println(" Item ID is invalid");
-        } else if (getItemName()!=null && !getItemName().trim().isEmpty()) {
+        } else if (getItemName()==null && getItemName().trim().isEmpty()) {
             System.out.println(" Item Name is invalid ");
         }
-        else if (getQuantity()>0){
+        else if (getQuantity()<=0){
             System.out.println(" The Quantity must greater than 0");
-        } else if (getUnityPrice()>0) {
+        } else if (getUnityPrice()<=0) {
             System.out.println(" The Unity price must greater than 0");
-        } else if (getCategory()!=null && !getCategory().trim().isEmpty()) {
+        } else if (getCategory()==null && getCategory().trim().isEmpty()) {
             System.out.println(" The category is invalid ");
-        } else if (getDownloadLink()!=null && !getDownloadLink().trim().isEmpty()) {
+        } else if (getDownloadLink()==null && getDownloadLink().trim().isEmpty()) {
             System.out.println(" Enter link is Invalid ");
         }
         else {

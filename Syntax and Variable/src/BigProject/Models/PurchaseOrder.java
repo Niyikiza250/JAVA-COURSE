@@ -136,11 +136,37 @@ public class PurchaseOrder extends Order {
     @Override
     protected void validateOrderData() {
 
-
+        if (getOrderId()==null && getOrderId().trim().isEmpty()){
+            System.out.println(" Please Enter valid Order Id ");
+        } else if (getOrderDate().isBefore(LocalDate.now())) {
+            System.out.println(" Please enter valid Date ");
+        } else if (getSupplierId()==null || getSupplierId().trim().isEmpty()) {
+            System.out.println(" please Enter valid Supplier Id ");
+        } else if (getOrderStatus()==null||getOrderStatus().trim().isEmpty()) {
+            System.out.println(" Please enter valid Order Status ");
+        } else if (getTotalAmount()<=0) {
+            System.out.println(" The Total Amount must be greater than 0");
+        } else if (getDeliveryDate().isBefore(LocalDate.now())) {
+            System.out.println(" Enter valid Date Please ");
+        } else if (getItemCount()<=0) {
+            System.out.println(" The Item Count must be greater than 0");
+        }
+        else {
+            System.out.println(" Data entered are valid ");
+        }
     }
 
     @Override
     protected void displayOrderData() {
+        System.out.println(" PURCHASE ORDER DETAILS ");
+        System.out.println("=========================");
+        System.out.println(" Item Count : "+getItemCount());
+        System.out.println(" Order ID : "+getOrderId());
+        System.out.println(" Order Date : "+getOrderDate());
+        System.out.println(" Supplier ID : "+getSupplierId());
+        System.out.println(" Order Status : "+getOrderStatus());
+        System.out.println(" Delivery Date : "+getDeliveryDate());
+        System.out.println(" Total Amount : "+getTotalAmount());
 
     }
 }

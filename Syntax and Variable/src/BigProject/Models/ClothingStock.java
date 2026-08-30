@@ -103,18 +103,18 @@ public class ClothingStock extends StockItem {
     @Override
     protected void validateItemData() {
 
-        if (getItemId()!=null && !getItemId().trim().isEmpty()){
+        if (getItemId()==null && getItemId().trim().isEmpty()){
             System.out.println(" Item ID is invalid");
-        } else if (getItemName()!=null && !getItemName().trim().isEmpty()) {
+        } else if (getItemName()==null && !getItemName().trim().isEmpty()) {
             System.out.println(" Item Name is invalid ");
         }
-        else if (getQuantity()>0){
+        else if (getQuantity()<=0){
             System.out.println(" The Quantity must greater than 0");
-        } else if (getUnityPrice()>0) {
+        } else if (getUnityPrice()<=0) {
             System.out.println(" The Unity price must greater than 0");
-        } else if (getCategory()!=null && !getCategory().trim().isEmpty()) {
+        } else if (getCategory()==null && getCategory().trim().isEmpty()) {
             System.out.println(" The category is invalid ");
-        } else if (getFabricType()!=null && !getFabricType().trim().isEmpty()) {
+        } else if (getFabricType()==null && getFabricType().trim().isEmpty()) {
             System.out.println(" The entered Fabric type is invalid ");
         }
         else {
