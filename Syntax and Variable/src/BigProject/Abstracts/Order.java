@@ -50,7 +50,7 @@ public abstract class Order {
             this.orderStatus = orderStatus;
         }
         else {
-            System.out.println(" The order status must be Characters or numbers .");
+            System.out.println(" The order status must be Characters or numbers . ");
         }
     }
 
